@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap");
+
+/* ===== css variables */
+
+:root {
+  --header-height: 3.5rem;
+
+  /* ===== COlOR: HSL */
+
+  --first-color: hsl(225, 73%, 57%);
+  --first-color-dark: hsl(225, 63%, 57%);
+  --first-color-light: hsla(225, 100%, 83%, 0.548);
+  --title-color: hsl(0, 0%, 0%);
+  --text-color: hsla(0, 2%, 11%, 0.856);
+  --body-color: hsl(0, 100%, 99%);
+  --container-color: hsl(0, 100%, 99%);
+  --border-color: hsl(225, 100%, 83%);
+  --white: #fff;
+
+  /* ==== FONTS ==== */
+  /* .5rem = 8px | 1rem = 16px */
+
+  --body-font: "Jost", sans-serif;
+  --big-font-size: 3rem;
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 2.15rem;
+  --h3-font-size: 1.5rem;
+  --larger-font-size: 1.2rem;
+  --large-font-size: 1.125rem;
+
+  /* ==== Font Weight ===== */
+
+  --weight-300: 300;
+  --weight-400: 400;
+  --weight-600: 600;
+}
+
+/* ==== BASE ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input,
+textarea,
+button,
+body {
+  font-family: var(--body-font);
+  font-size: var(--large-font-size);
+}
+
+main {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--weight-600);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ==== CLASSES CSS REUTILIZAVEIS */
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 6rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  font-weight: var(--weight-400);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.section__title::before {
+  content: attr(data-title);
+  display: block;
+  color: var(--first-color);
+  font-size: var(--large-font-size);
+  font-weight: var(--weight-600);
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.title-center {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* BreakPoints */
+
+/* Large Devices */
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+
+  :root {
+    --big-font-size: 2.5rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --larger-font-size: 1rem;
+    --large-font-size: 0.938rem;
+  }
+
+  .home__img {
+    width: 340px;
+  }
+
+  .about__img-container {
+    height: 320px;
+  }
+
+  .resume__icon {
+    line-height: 1.4em;
+  }
+
+  .services__icon {
+    font-size: 1.5rem;
+  }
+
+  .services__no {
+    font-size: 2.5rem;
+  }
+
+  .services__title {
+    margin-block: 1.25rem 0.75rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .home__container,
+  .about__container,
+  .resume__container,
+  .testimonials__container,
+  .contact__container {
+    grid-template-columns: 1fr;
+  }
+
+  .home__content {
+    order: 1;
+  }
+
+  .home__img-container,
+  .contact__container {
+    margin-inline: auto;
+  }
+
+  .about__container {
+    row-gap: 2rem;
+  }
+
+  .about__img {
+    left: 50%;
+    width: auto;
+  }
+
+  .about__img-container {
+    display: none;
+  }
+
+  .services__container,
+  .skills__container,
+  .work__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials__container,
+  .resume__container {
+    row-gap: 2.5rem;
+  }
+}
+
+/* Medium devices */
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 560px;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1rem);
+  }
+
+  .nav__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+   background-color: transparent;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.75rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(60px);
+    
+  }
+
+  .nav__toggle{
+    display: block;
+    color: var(--first-color-dark);
+    font-size: 1.8rem;
+   
+    
+  }
+
+  .nav__item {
+    padding-block: 0.5rem;
+    text-transform: uppercase;
+  }
+
+
+  .home__img {
+    width: 300px;
+  }
+}
+
+/* small devices */
+
+@media screen and (max-width: 576px) {
+  .home {
+    padding-top: 7rem;
+  }
+
+  .section {
+    padding-block: 4rem;
+  }
+
+  .resume__icon {
+    display: none;
+  }
+  .services__container,
+  .skills__container,
+  .work__container,
+  .form__group {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .about__data {
+    grid-template-columns: 1fr;
+  }
+
+  .about__bottom,
+  .resume__date-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .resume__date-title {
+    row-gap: 0.25rem;
+  }
+
+  .resume__header,
+  .skills__titles,
+  .skills__description {
+    padding-inline: 1rem;
+  }
+
+  .resume__content {
+    padding-inline: 1rem 1.5rem;
+  }
+  .about__bottom {
+    row-gap: 1.25rem;
+  }
+
+  .about__bottom .btn {
+    order: 1;
+  }
+
+  .services__item {
+    padding: 2rem 2.5rem;
+  }
+}

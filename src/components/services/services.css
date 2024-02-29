@@ -1,0 +1,48 @@
+.services{
+    background-color: hsla(196, 23%, 84%, 0.527);
+
+}
+
+.services__container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.services__item {
+    background-color: var(--container-color);
+    border: 1px solid var(--container-color);
+    padding: 2.5rem 1.8rem;
+    border-radius: .5rem;
+    transition: all .5s  ease;
+    position: relative;
+}
+
+.services__item:hover {
+    background-color: var(--first-color-light);
+    border-color: var(--border-color);
+    cursor: pointer;
+    
+}
+
+.services__icon {
+    color: var(--first-color);
+    font-size: 1.8rem;
+}
+
+.services__title {
+    font-size: var(--h3-font-size);
+    margin-block: 1.5rem 1rem;
+}
+
+.services__no {
+    position: absolute;
+    right: 2.5rem;
+    top: 1rem;
+    color: var(--first-color);
+    font-size: 2.75rem;
+}
+
+.services__description {
+    text-align: justify;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}

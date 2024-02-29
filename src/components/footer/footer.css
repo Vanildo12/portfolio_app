@@ -1,0 +1,29 @@
+.footer {
+    background-color: var(--first-color-light);
+    padding-block: 3rem;
+}
+
+.footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__copyright {
+  letter-spacing: 1px;
+}
+
+.footer__social-links {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+
+.footer__social-link {
+    color: var(--text-color);
+    font-size: var(--large-font-size);
+}
+
+.footer__social-link:hover {
+    color: var(--first-color);
+}

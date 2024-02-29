@@ -1,0 +1,53 @@
+.header {
+  position: fixed;
+  background-color: var(--container-color);
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 3px 9px var(--first-color-light);
+  z-index: 100;
+}
+
+.nav,
+.nav__list {
+  display: flex;
+}
+
+.nav {
+  height: calc(var(--header-height) + 2.25rem);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  color: var(--first-color);
+  font-size: var(--h3-font-size);
+}
+
+.nav__list {
+  column-gap: 1.5rem;
+
+}
+
+.nav__link {
+  color: var(--title-color);
+  transition: all 0.3s ease;
+}
+
+.nav__toggle {
+  display: none;
+  cursor: pointer;
+}
+
+/* Estilo para mostrar o menu quando toggle é verdadeiro */
+.nav__list.active {
+  display: flex;
+  max-height: 100vh; 
+  overflow-y: auto;
+}
+
+/* Estilos para o link ativo e link hover */
+.active-link,
+.nav__link:hover {
+  color: var(--first-color);
+}
