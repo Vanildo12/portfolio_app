@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react_portfolio/static/css/main.a255743f.css",
+    "main.js": "/react_portfolio/static/js/main.95f5378e.js",
+    "static/media/service-2.jpg": "/react_portfolio/static/media/service-2.e68e738522e6257eb6ab.jpg",
+    "static/media/service-5.jpg": "/react_portfolio/static/media/service-5.7ef89c6e755a92cb9510.jpg",
+    "static/media/service-1.jpg": "/react_portfolio/static/media/service-1.f13ad3903df0828a4f92.jpg",
+    "static/media/service-4.jpg": "/react_portfolio/static/media/service-4.cc1fe557bbaa2f813009.jpg",
+    "static/media/about.png": "/react_portfolio/static/media/about.a3d5f4b1150c48d307d8.png",
+    "static/media/profile.png": "/react_portfolio/static/media/profile.a3d5f4b1150c48d307d8.png",
+    "static/media/CV.pdf": "/react_portfolio/static/media/CV.77a8afb85d8a97b64307.pdf",
+    "static/media/testimonials -1.jpg": "/react_portfolio/static/media/testimonials -1.af19ceb2700d1b4caeb6.jpg",
+    "static/media/testimonials -2.jpg": "/react_portfolio/static/media/testimonials -2.a00728a1f2a808538ee4.jpg",
+    "static/media/project-img-2.jpg": "/react_portfolio/static/media/project-img-2.51f9995236db15f97ba0.jpg",
+    "static/media/service-3.jpg": "/react_portfolio/static/media/service-3.38e235d17793bfeee02c.jpg",
+    "index.html": "/react_portfolio/index.html",
+    "main.a255743f.css.map": "/react_portfolio/static/css/main.a255743f.css.map",
+    "main.95f5378e.js.map": "/react_portfolio/static/js/main.95f5378e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a255743f.css",
+    "static/js/main.95f5378e.js"
+  ]
+}
